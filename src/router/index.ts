@@ -1,11 +1,9 @@
 import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router';
 import { autoRoutes } from './utils/auto'; 
 
-// import otherRoutes from './other';
-
 const routes: RouteRecordRaw[] = [
   { path: '/', name: 'Home', component: () => import('@/views/index.vue') },
-  { path: '/playground', name: 'Playground', component: () => import('@/views/Playground.vue') },
+  { path: '/playground', name: 'playground', component: () => import('@/views/playground.vue') },
   { path: '/:catchAll(.*)', name: 'NotFound', component: () => import('@/views/other/404.vue') },
   ...autoRoutes(import.meta.glob('../views/demo/vue3/*.vue'), '/demo/vue3'),
   ...autoRoutes(import.meta.glob('../views/demo/cart/*.vue'), '/demo/cart'),

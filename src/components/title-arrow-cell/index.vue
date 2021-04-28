@@ -26,7 +26,7 @@ export default defineComponent({
     },
     subTitle: {
       type: String,
-      default: 'Button',
+      default: '',
     },
     index: {
       type: Number,

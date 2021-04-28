@@ -1,6 +1,6 @@
 import __fly from './bridge/__fly';
 import __fly_native from './bridge/__fly_native';
-import * as core from '@/utils/core';
+import * as jsc from 'qx-js-core';
 import { commonHeaders, commonParams } from './common';
 
 export enum Source {
@@ -20,7 +20,7 @@ export interface Info {
 }
 
 export default function request(info: Info): Promise<any> {
-  console.assert(core.isNotEmpty(info.path) || core.isNotEmpty(info.url), 'url 和 path 不能都为空');
+  console.assert(jsc.isNotEmpty(info.path) || jsc.isNotEmpty(info.url), 'url 和 path 不能都为空');
   const _type = info.type;
   const _baseUrl = info.baseUrl ?? import.meta.env.BASE_URL;
   const _url = info.url ?? (_baseUrl + info.path);

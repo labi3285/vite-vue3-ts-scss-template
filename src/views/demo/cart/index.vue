@@ -1,7 +1,6 @@
 <template>
   <Products />
   <Cart />
-  <LoadMore />
 </template>
 
 <script lang="ts">

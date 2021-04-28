@@ -24,6 +24,7 @@
 import { defineComponent, ref } from 'vue';
 import BaseUI from '@/components/pure-ui';
 import request from '@/utils/request';
+import * as jsc from 'qx-js-core';
 
 export default defineComponent({
   name: 'Playground',
@@ -42,6 +43,8 @@ export default defineComponent({
     };
   },
   async mounted() {
+    jsc.log(123);
+
   },
   methods: {
     loadData(isRefresh: boolean) {
