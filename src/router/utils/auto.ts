@@ -27,7 +27,7 @@ export function autoRoutes(records: Record<string, { [key: string]: any }>, base
       }
       name = (basePath + '-' + name).replace(/\//, '-');
       arr.push({ path, name, component: records[key] });
-      jsc.log(`[AUTO ROUTE] path:${path}`);
+      jsc.log(`[AUTO ROUTE] ${path}`);
     }
   }
   return arr;

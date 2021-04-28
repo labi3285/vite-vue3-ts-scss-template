@@ -6,7 +6,7 @@ const routes: RouteRecordRaw[] = [
   { path: '/playground', name: 'playground', component: () => import('@/views/playground.vue') },
   { path: '/:catchAll(.*)', name: 'NotFound', component: () => import('@/views/other/404.vue') },
   ...autoRoutes(import.meta.glob('../views/demo/vue3/*.vue'), '/demo/vue3'),
-  ...autoRoutes(import.meta.glob('../views/demo/cart/*.vue'), '/demo/cart'),
+  ...autoRoutes(import.meta.glob('../views/demo/vuex-cart/*.vue'), '/demo/vuex-cart'),
   ...autoRoutes(import.meta.glob('../views/demo/pure-ui/*.vue'), '/demo/pure-ui'),
 ];
 
