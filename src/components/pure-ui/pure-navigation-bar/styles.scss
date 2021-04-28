@@ -1,0 +1,50 @@
+@import '../global.scss';
+
+.pure-navigation-bar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffffff;
+  .left {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .back {
+      padding-left: $pure-margin-back;
+      padding-right: $pure-margin-inner / 2;
+      .icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .center {
+    height: 100%;
+    flex: 1;
+    font-size: $pure-font-size-20;
+    color: $pure-color-t3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: $pure-margin-inner / 2;
+    padding-right: $pure-margin-inner / 2;
+  }
+  .right {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: $pure-margin-inner / 2;
+    padding-right: $pure-margin-left-right;
+  }
+  .break-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: gray;
+  }
+}

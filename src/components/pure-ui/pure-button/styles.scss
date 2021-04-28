@@ -1,0 +1,212 @@
+@import '../global.scss';
+@import './minxins.scss';
+
+.pure-button {
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
+  &:disabled {
+    opacity: 0.3;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.pure-button-text-default-small {
+  @include --pure-button-text-size-small();
+  color: $pure-color-t3;
+}
+.pure-button-text-default {
+  @include --pure-button-text-size-normal();
+  color: $pure-color-t3;
+}
+.pure-button-text-default-big {
+  @include --pure-button-text-size-big();
+  color: $pure-color-t3;
+}
+
+.pure-button-text-confirm-small {
+  @include --pure-button-text-size-small();
+  color: $pure-color-tint;
+}
+.pure-button-text-confirm {
+  @include --pure-button-text-size-normal();
+  color: $pure-color-tint;
+}
+.pure-button-text-confirm-big {
+  @include --pure-button-text-size-big();
+  color: $pure-color-tint;
+}
+
+.pure-button-text-warning-small {
+  @include --pure-button-text-size-small();
+  color: $pure-color-warning;
+}
+.pure-button-text-warning {
+  @include --pure-button-text-size-normal();
+  color: $pure-color-warning;
+}
+.pure-button-text-warning-big {
+  @include --pure-button-text-size-big();
+  color: $pure-color-warning;
+}
+
+.pure-button-text-success-small {
+  @include --pure-button-text-size-small();
+  color: $pure-color-success;
+}
+.pure-button-text-success {
+  @include --pure-button-text-size-normal();
+  color: $pure-color-success;
+}
+.pure-button-text-success-big {
+  @include --pure-button-text-size-big();
+  color: $pure-color-success;
+}
+
+.pure-button-text-alert-small {
+  @include --pure-button-text-size-small();
+  color: $pure-color-alert;
+}
+.pure-button-text-alert {
+  @include --pure-button-text-size-normal();
+  color: $pure-color-alert;
+}
+.pure-button-text-alert-big {
+  @include --pure-button-text-size-big();
+  color: $pure-color-alert;
+}
+
+
+.pure-button-link-small {
+  @include --pure-button-text-size-small();
+  color: $pure-color-tint;
+  text-decoration: underline;
+}
+.pure-button-link {
+  @include --pure-button-text-size-normal();
+  color: $pure-color-tint;
+  text-decoration: underline;
+}
+.pure-button-link-big {
+  @include --pure-button-text-size-big();
+  color: $pure-color-tint;
+  text-decoration: underline;
+}
+
+.pure-button-default {
+  @include --pure-button-size-normal();
+  border: 1px solid $pure-color-t9;
+  outline: none;
+  color: $pure-color-t3;
+  background-color: transparent;
+}
+.pure-button-default-small {
+  @include --pure-button-size-small();
+  border: 1px solid $pure-color-t9;
+  outline: none;
+  color: $pure-color-t3;
+  background-color: transparent;
+}
+.pure-button-default-big {
+  @include --pure-button-size-big();
+  border: 1px solid $pure-color-t9;
+  outline: none;
+  color: $pure-color-t3;
+  background-color: transparent;
+}
+
+.pure-button-confirm {
+  @include --pure-button-size-normal();
+  border: none;
+  outline: none;
+  color: $pure-color-white;
+  background-color: $pure-color-tint;
+}
+.pure-button-confirm-small {
+  @include --pure-button-size-small();
+  border: none;
+  outline: none;
+  color: $pure-color-white;
+  background-color: $pure-color-tint;
+}
+.pure-button-confirm-big {
+  @include --pure-button-size-big();
+  border: none;
+  outline: none;
+  color: $pure-color-white;
+  background-color: $pure-color-tint;
+}
+
+.pure-button-warning {
+  @include --pure-button-size-normal();
+  border: none;
+  outline: none;
+  color: $pure-color-white;
+  background-color: $pure-color-warning;
+}
+.pure-button-warning-small {
+  @include --pure-button-size-small();
+  border: none;
+  outline: none;
+  color: $pure-color-white;
+  background-color: $pure-color-warning;
+}
+.pure-button-warning-big {
+  @include --pure-button-size-big();
+  border: none;
+  outline: none;
+  color: $pure-color-white;
+  background-color: $pure-color-warning;
+}
+
+.pure-button-success {
+  @include --pure-button-size-normal();
+  border: none;
+  outline: none;
+  color: $pure-color-white;
+  background-color: $pure-color-success;
+}
+.pure-button-success-small {
+  @include --pure-button-size-small();
+  border: none;
+  outline: none;
+  color: $pure-color-white;
+  background-color: $pure-color-success;
+}
+.pure-button-success-big {
+  @include --pure-button-size-big();
+  border: none;
+  outline: none;
+  color: $pure-color-white;
+  background-color: $pure-color-success;
+}
+
+.pure-button-alert {
+  @include --pure-button-size-normal();
+  border: none;
+  outline: none;
+  color: $pure-color-white;
+  background-color: $pure-color-alert;
+}
+.pure-button-alert-small {
+  @include --pure-button-size-small();
+  border: none;
+  outline: none;
+  color: $pure-color-white;
+  background-color: $pure-color-alert;
+}
+.pure-button-alert-big {
+  @include --pure-button-size-big();
+  border: none;
+  outline: none;
+  color: $pure-color-white;
+  background-color: $pure-color-alert;
+}
+
+
+
+

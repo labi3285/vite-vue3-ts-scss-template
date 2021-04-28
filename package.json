@@ -1,0 +1,44 @@
+{
+  "name": "vue3demo",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "ENV=dev vite --mode dev",
+    "test": "jest",
+    "build": "vue-tsc --noEmit && vite build",
+    "lint": "eslint \"src/**/*.{ts,tsx,js,json,vue}\"",
+    "lint:fix": "eslint \"src/**/*.{ts,tsx,js,json,vue}\" --fix",
+    "fix": "npx eslint --fix ./src --ext .js,.jsx,.ts,.tsx,.vue",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "dsbridge": "^3.1.4",
+    "flyio": "^0.6.14",
+    "font-awesome": "^4.7.0",
+    "hammerjs": "^2.0.8",
+    "qx-js-core": "0.0.1",
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.6",
+    "vuex": "^4.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "@types/node": "^14.14.41",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "@vitejs/plugin-vue": "^1.2.1",
+    "@vue/compiler-sfc": "^3.0.11",
+    "better-scroll": "^2.2.1",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.24.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "sass": "^1.32.8",
+    "scss": "^0.2.4",
+    "scss-loader": "^0.0.1",
+    "typescript": "^4.2.4",
+    "vconsole": "^3.4.1",
+    "vite": "^2.1.5",
+    "vite-plugin-vue-svg": "^0.1.0",
+    "vue-tsc": "^0.0.15"
+  }
+}

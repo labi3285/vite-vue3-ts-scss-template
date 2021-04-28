@@ -1,0 +1,39 @@
+@import '../global.scss';
+
+@mixin --pure-button-text-size-small {
+  font-size: $pure-font-size-12;
+  border: none;
+  outline: none;
+  padding: 3px 0 3px 0;
+  background-color: transparent;
+}
+@mixin --pure-button-text-size-normal {
+  font-size: $pure-font-size-14;
+  border: none;
+  outline: none;
+  padding: 5px 0 5px 0;
+  background-color: transparent;
+}
+@mixin --pure-button-text-size-big {
+  font-size: $pure-font-size-18;
+  border: none;
+  outline: none;
+  padding: 7px 0 7px 0;
+  background-color: transparent;
+}
+
+@mixin --pure-button-size-small {
+  font-size: $pure-font-size-9;
+  padding: 3px 7px 3px 7px;
+  border-radius: 2px;
+}
+@mixin --pure-button-size-normal {
+  font-size: $pure-font-size-14;
+  padding: 5px 15px 5px 15px;
+  border-radius: 3px;
+}
+@mixin --pure-button-size-big {
+  font-size: $pure-font-size-16;
+  padding: 7px 20px 7px 20px;
+  border-radius: 5px;
+}
