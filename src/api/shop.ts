@@ -7,10 +7,12 @@ export function getProducts() {
   ];
   return new Promise((resove, reject) => {
     setTimeout(() => {
-      if (Math.random() > 0.2) {
+      if (Math.random() < 0.1) {
+        resove([]);
+      } else if (Math.random() < 0.2) {
         resove(products);
       } else {
-        reject(new Error('error'));
+        reject(new Error('system error'));
       }
     }, 1000);
   });
@@ -19,7 +21,7 @@ export function getProducts() {
 export function buyProducts(products: any[]) {
   return new Promise((resove, reject) => {
     setTimeout(() => {
-      if (Math.random() > 0.5) {
+      if (Math.random() > 0.8) {
         resove(products);
       } else {
         reject(new Error('error'));

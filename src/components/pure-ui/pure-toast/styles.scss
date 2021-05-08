@@ -1,0 +1,54 @@
+@import '../global.scss';
+
+.pure-toast-default {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $pure-margin-toast-top-bottom $pure-margin-toast-left-right;
+
+  .message-box {
+    min-width: 50px;
+    border-radius: 5px;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: $pure-margin-toast-top-bottom $pure-margin-toast-left-right;
+    .icon-loading {
+      width: 30px;
+      height: 30px;
+    }
+    .icon {
+      width: 30px;
+      height: 30px;
+      &-success {
+        background-image: url('/src/components/pure-ui/pure-toast/success.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      &-warning {
+        background-image: url('/src/components/pure-ui/pure-toast/warning.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      &-error {
+        background-image: url('/src/components/pure-ui/pure-toast/error.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+    .space {
+      height: $pure-margin-inner;
+    }
+    .message {
+      font-size: $pure-font-size-16;
+      color: #ffffff;
+    }
+  }
+}
+
+
+
+
+

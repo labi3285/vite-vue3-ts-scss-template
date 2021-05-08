@@ -1,0 +1,90 @@
+@import '../global.scss';
+
+@mixin --pure-step-count-placeholder($color, $size) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-size: $size;
+  }
+  &::-moz-placeholder {   /* Mozilla Firefox 19+ */
+    color: $color;
+    font-size: $size;
+  }
+  &:-moz-placeholder {    /* Mozilla Firefox 4 to 18 */
+    color: $color;
+    font-size: $size;
+  }
+  &:-ms-input-placeholder {  /* Internet Explorer 10-11 */
+    color: $color;
+    font-size: $size;
+  }
+}
+
+@mixin --pure-step-count-flex {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  input {
+    flex: 1;
+  }
+}
+
+@mixin --pure-step-count-size-small {
+  input {
+    font-size: $pure-font-size-14;
+    padding: 0 5px 0 5px;
+  }
+  .button-minus {
+    font-size: $pure-font-size-14;
+    padding: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+  }
+  .button-add {
+    font-size: $pure-font-size-14;
+    padding: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+  }
+}
+@mixin --pure-step-count-size-normal {
+  input {
+    font-size: $pure-font-size-16;
+    padding: 0 5px 0 5px;
+  }
+  .button-minus {
+    font-size: $pure-font-size-16;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+  }
+  .button-add {
+    font-size: $pure-font-size-16;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+  }
+}
+@mixin --pure-step-count-size-big {
+  input {
+    font-size: $pure-font-size-18;
+    padding: 0 10px 0 10px;
+  }
+  .button-minus {
+    font-size: $pure-font-size-18;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+  }
+  .button-add {
+    font-size: $pure-font-size-18;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+  }
+}

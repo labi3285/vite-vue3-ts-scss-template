@@ -1,7 +1,7 @@
 <template>
   <button
     class="pure-button"
-    @click="click"
+    @click.stop="onClick"
   >
     <slot>{{ title }}</slot>
   </button>
@@ -27,13 +27,25 @@ export default defineComponent({
     'update:isLoading',
   ],
   methods: {
-    click() {
+    onClick() {
       this.$emit('click');
     },
   },
 });
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
+@import '../global.scss';
+.pure-button {
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color:rgba(0,0,0,0); 
+  &:disabled {
+    opacity: 0.3;
+  }
+  &:active {
+    opacity: 0.7;
+  }
+}
 </style>

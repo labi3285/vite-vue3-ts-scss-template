@@ -1,0 +1,65 @@
+@import '../global.scss';
+@import './mixins.scss';
+
+.pure-step-count-default {
+  @include --pure-step-count-flex();
+  @include --pure-step-count-size-normal();
+  input {
+    @include --pure-step-count-placeholder($pure-color-placeholder, $pure-font-size-16);
+    color: $pure-color-t3;
+    font-size:  $pure-font-size-16;
+  }
+  .button-minus {
+    background-color: $pure-color-tint;
+    color: $pure-color-white;
+    border: none;
+  }
+  .button-add {
+    background-color: $pure-color-tint;
+    color: $pure-color-white;
+    border: none;
+  }
+}
+.pure-step-count-default-small {
+  @include --pure-step-count-flex();
+  @include --pure-step-count-size-small();
+  input {
+    @include --pure-step-count-placeholder($pure-color-placeholder, $pure-font-size-16);
+    color: $pure-color-t3;
+  }
+  .button-minus {
+    background-color: $pure-color-tint;
+    color: $pure-color-white;
+    border: none;
+  }
+  .button-add {
+    background-color: $pure-color-tint;
+    color: $pure-color-white;
+    border: none;
+  }
+}
+.pure-step-count-default-big {
+  @include --pure-step-count-flex();
+  @include --pure-step-count-size-big();
+  input {
+    @include --pure-step-count-placeholder($pure-color-placeholder, $pure-font-size-16);
+    color: $pure-color-t3;
+  }
+  .button-minus {
+    background-color: $pure-color-tint;
+    color: $pure-color-white;
+    border: none;
+  }
+  .button-add {
+    background-color: $pure-color-tint;
+    color: $pure-color-white;
+    border: none;
+  }
+}
+
+
+
+
+
+
+

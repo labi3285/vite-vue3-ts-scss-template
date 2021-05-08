@@ -35,6 +35,9 @@ module.exports = {
     /* 一行最多的变量数 */
     'vue/max-attributes-per-line': 'off',
     'vue/attribute-hyphenation': 'off',
+    'vue/no-unused-components': 'off',
+    'vue/html-self-closing': 'off',
+    'vue/html-closing-bracket-newline': 'off',
 
     /* 结尾的分号 */
     'semi': 'warn',

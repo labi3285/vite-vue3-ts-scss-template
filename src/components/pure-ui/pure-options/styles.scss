@@ -1,0 +1,22 @@
+@import '../global.scss';
+@import './mixins.scss';
+
+.pure-options-round {
+  @include --pure-options-normal(
+    '/src/components/pure-ui/pure-options/select0.png',
+    '/src/components/pure-ui/pure-options/select1.png',
+    );
+}
+
+.pure-options-square {
+  @include --pure-options-normal(
+    '/src/components/pure-ui/pure-options/check0.png',
+    '/src/components/pure-ui/pure-options/check1.png',
+    );
+}
+
+
+
+
+
+

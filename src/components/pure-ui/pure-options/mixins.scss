@@ -1,0 +1,31 @@
+@import '../global.scss';
+
+@mixin --pure-options-normal($image, $imageSelect) {
+  display: flex;
+  .item {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) { 
+      margin-right: $pure-margin-inner;
+    }
+    .icon {
+      width: 16px;
+      height: 16px;
+      background-image: url($image);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .icon-select {
+      width: 16px;
+      height: 16px;
+      background-image: url($imageSelect);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .label {
+      margin-left: $pure-margin-inner-small;
+      color: $pure-color-t3;
+      font-size: $pure-font-size-16;
+    }
+  }
+}

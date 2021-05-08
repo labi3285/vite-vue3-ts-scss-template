@@ -1,5 +1,5 @@
 <template>
-  <div class="page-wrap">
+  <div class="wrap">
     <pure-navigation-bar>pure-ui</pure-navigation-bar>
     <pure-better-scroll class="content">
       <title-arrow-cell v-for="(e, i) in list" :key="i" :index="i" :title="e.name" @click="listItemClick(e)" />
@@ -9,13 +9,13 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import BaseUI from '@/components/pure-ui';
+import PureUI from '@/components/pure-ui';
 import TitleArrowCell from '@/components/title-arrow-cell/index.vue';
 import routerMixin from '@/components/pure-ui/utils/mixins/router';
 
 export default defineComponent({
   components: {
-    ...BaseUI,
+    ...PureUI,
     TitleArrowCell,
   },
   mixins: [
@@ -39,7 +39,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.page-wrap {
+.wrap {
   height: 100%;
   display: flex;
   flex-direction: column;

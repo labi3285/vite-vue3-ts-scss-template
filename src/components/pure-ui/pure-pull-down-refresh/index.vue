@@ -86,8 +86,8 @@ export default defineComponent({
   },
   methods: {
     loadData() {
-      this.$emit('load');
       this.$emit('update:isLoading', true);
+      this.$emit('load');
     },
     animate(el: HTMLElement, toHeight: number, pxInOneSec: number, done: any) {
       const _from_height = el.offsetHeight;
@@ -126,7 +126,9 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+@import '../global.scss';
+
 .pure-pull-down-refresh {
   width: 100%;
   text-align: center;

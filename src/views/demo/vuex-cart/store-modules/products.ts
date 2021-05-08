@@ -1,6 +1,6 @@
 import { InjectionKey } from 'vue';
 import { Store, Module } from 'vuex';
-import { BaseState } from '../index';
+import { BaseState } from '@/store/index';
 import * as shop from '@/api/shop';
 const isDebug = import.meta.env.NODE_ENV !== 'production';
 import { Product } from '@/models/Product';

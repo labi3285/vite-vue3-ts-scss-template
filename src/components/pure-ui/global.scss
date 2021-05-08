@@ -1,8 +1,12 @@
 
+$pure-margin-toast-top-bottom: 15px;
+$pure-margin-toast-left-right: 30px;
+
 $pure-margin-top-bottm: 10px;
 $pure-margin-left-right: 15px;
+$pure-margin-inner-small: 5px;
 $pure-margin-inner: 10px;
-$pure-margin-back: 5px;
+$pure-margin-break: 10px;
 
 $pure-font-size-9: 9px;
 $pure-font-size-12: 12px;
@@ -11,9 +15,15 @@ $pure-font-size-16: 16px;
 $pure-font-size-18: 18px;
 $pure-font-size-20: 20px;
 
+$pure-color-line: #dddddd;
+$pure-color-back: #f5f5f5;
+$pure-color-border: #999999;
+
 $pure-color-t3: #333333;
 $pure-color-t6: #666666;
 $pure-color-t9: #999999;
+$pure-color-placeholder: #AAAAAA;
+$pure-color-default: #666666;
 
 $pure-color-disable: #ffffff;
 
@@ -22,7 +32,3 @@ $pure-color-tint: #1e90ff;
 $pure-color-alert: #ff0000;
 $pure-color-success: #008000;
 $pure-color-warning: orange;
-
-.pure-bold {
-  font-weight: bold;
-}

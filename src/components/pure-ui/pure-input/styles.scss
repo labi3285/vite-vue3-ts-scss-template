@@ -1,0 +1,45 @@
+@import '../global.scss';
+@import './mixins.scss';
+
+.pure-input-default {
+  @include --pure-input-flex();
+  input {
+    @include --pure-input-placeholder($pure-color-placeholder, $pure-font-size-16);
+    color: $pure-color-t3;
+    font-size:  $pure-font-size-16;
+  }
+}
+
+.pure-input-border-small {
+  @include --pure-input-flex();
+  @include --pure-input-size-small();
+  border: 1px solid $pure-color-border;
+  input {
+    @include --pure-input-placeholder($pure-color-placeholder, $pure-font-size-16);
+    color: $pure-color-t3;
+  }
+}
+.pure-input-border {
+  @include --pure-input-flex();
+  @include --pure-input-size-normal();
+  border: 1px solid $pure-color-border;
+  input {
+    @include --pure-input-placeholder($pure-color-placeholder, $pure-font-size-16);
+    color: $pure-color-t3;
+  }
+}
+.pure-input-border-big {
+  @include --pure-input-flex();
+  @include --pure-input-size-big();
+  border: 1px solid $pure-color-border;
+  input {
+    @include --pure-input-placeholder($pure-color-placeholder, $pure-font-size-16);
+    color: $pure-color-t3;
+  }
+}
+
+
+
+
+
+

@@ -54,10 +54,10 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+@import '../global.scss';
 .pure-better-scroll {
   width: 100%;
   overflow: hidden;
-  height: 200px;
 }
 </style>

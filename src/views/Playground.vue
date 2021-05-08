@@ -1,35 +1,18 @@
 <template>
-  <pure-button class="pure-button-confirm-small">按钮</pure-button>
-  <pure-button class="pure-button-confirm">按钮</pure-button>
-  <pure-button class="pure-button-confirm-big">按钮</pure-button>
-
-  <pure-button class="pure-button-alert-small">按钮</pure-button>
-  <pure-button class="pure-button-alert">按钮</pure-button>
-  <pure-button class="pure-button-alert-big">按钮</pure-button>
-
-  
-  <!-- <pure-button class="pure-button-confirm">按钮</pure-button>
-  <pure-button class="pure-button-confirm">按钮</pure-button>
-  <pure-button class="pure-button-alert">按钮</pure-button> -->
-
-  <!-- <Refresh v-model:isLoading="isLoading" @load="loadData(true)" />
-  <div v-for="(e, i) in list" :key="i" :class="i % 2 === 0 ? 'item' : 'item gray'">
-    <div class="name">{{ e }}</div>
-    <Button />
-  </div>
-  <LoadMore v-model:isLoading="isLoading" :isThereMore="isThereMore" @load="loadData(false)" />     -->
+  xxxx
+  <!-- <pure-button class="pure-button-confirm-small">按钮</pure-button> -->
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import BaseUI from '@/components/pure-ui';
+import PureUI from '@/components/pure-ui';
 import request from '@/utils/request';
 import * as jsc from 'qx-js-core';
 
 export default defineComponent({
   name: 'Playground',
   components: {
-    ...BaseUI,
+    ...PureUI,
   },
   directives: {
 
@@ -43,28 +26,28 @@ export default defineComponent({
     };
   },
   async mounted() {
-    jsc.log(123);
+    // jsc.log(123);
 
   },
   methods: {
-    loadData(isRefresh: boolean) {
-      if (isRefresh) {
-        this.isThereMore = true;
-        this.count = 0;
-      }
-      setTimeout(() => {
-        const arr = [];
-        for (let i = this.count; i < this.count + 20; i ++) {
-          arr.push(`item-${i}`);
-        }
-        this.list = isRefresh ? arr : this.list.concat(arr);
-        this.isLoading = false;
-        this.count += 20;
-        if (this.count >= 100) {
-          this.isThereMore = false;
-        }
-      }, 1000);
-    },
+    // loadData(isRefresh: boolean) {
+    //   if (isRefresh) {
+    //     this.isThereMore = true;
+    //     this.count = 0;
+    //   }
+    //   setTimeout(() => {
+    //     const arr = [];
+    //     for (let i = this.count; i < this.count + 20; i ++) {
+    //       arr.push(`item-${i}`);
+    //     }
+    //     this.list = isRefresh ? arr : this.list.concat(arr);
+    //     this.isLoading = false;
+    //     this.count += 20;
+    //     if (this.count >= 100) {
+    //       this.isThereMore = false;
+    //     }
+    //   }, 1000);
+    // },
   },
 });
 </script>

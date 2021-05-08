@@ -24,7 +24,7 @@ export default defineComponent({
     },
     isLoadOnMounted: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     isThereMore: {
       type: Boolean,
@@ -45,9 +45,9 @@ export default defineComponent({
     }
   },
   methods: {
-    loadData() {
-      this.$emit('load');
+    async loadData() {
       this.$emit('update:isLoading', true);
+      this.$emit('load');
     },
     onViewChange() {
       const el = this.$refs.baseLoadMore as HTMLDivElement;
@@ -85,7 +85,8 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+@import '../global.scss';
 .pure-load-more {
   width: 100%;
   text-align: center;

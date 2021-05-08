@@ -1,5 +1,5 @@
 <template>
-  <div class="page-wrap">
+  <div class="wrap">
     <pure-navigation-bar>pure-button</pure-navigation-bar>
     <pure-better-scroll class="content">
       <pure-button class="pure-button-text-default-small">按钮</pure-button>
@@ -51,17 +51,17 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import BaseUI from '@/components/pure-ui';
+import PureUI from '@/components/pure-ui';
 
 export default defineComponent({
   components: {
-    ...BaseUI,
+    ...PureUI,
   },
 });
 </script>
 
 <style lang="scss" scoped>
-.page-wrap {
+.wrap {
   height: 100%;
   display: flex;
   flex-direction: column;

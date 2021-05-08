@@ -24,7 +24,7 @@
 <script lang="ts">
 import { defineComponent, PropType, ref, reactive, computed } from 'vue';
 import { queryFloat } from '../utils/query';
-import SvgArrowBack from '../resources/svg/arrow-back.svg';
+import SvgArrowBack from './arrow-back.svg';
 
 const kStatusBarDefaultHeight = 20;
 const kNavigationBarDefaultHeight = 44;
@@ -74,5 +74,47 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+@import '../global.scss';
+
+.pure-navigation-bar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid $pure-color-line;
+  background-color: #ffffff;
+  .left {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .back {
+      padding-left: $pure-margin-left-right;
+      padding-right: $pure-margin-inner / 2;
+      .icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .center {
+    height: 100%;
+    flex: 1;
+    font-size: $pure-font-size-20;
+    color: $pure-color-t3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: $pure-margin-inner / 2;
+    padding-right: $pure-margin-inner / 2;
+  }
+  .right {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: $pure-margin-inner / 2;
+    padding-right: $pure-margin-left-right;
+  }
+}
 </style>

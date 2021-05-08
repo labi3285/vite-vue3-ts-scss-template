@@ -12,5 +12,7 @@ declare module '*.gif';
 declare module '*.bmp';
 declare module '*.tiff';
 
+declare function require(string): string;
+
 // declare module '@/utils/core';
 declare module 'qx-js-core';
