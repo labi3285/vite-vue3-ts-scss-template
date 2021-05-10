@@ -1,5 +1,6 @@
 <template>
-  <div ref="pureToast" class="pure-toast" :class="cls" @click="onClickBack($event)">
+  <div ref="pureToast" class="pure-toast" :class="[cls, cls + '-possition-' + possition]" @click="onClickBack($event)">
+    <div class="space-top"></div>
     <div class="message-box" @click.stop.prevent>
       <svg v-if="type === 'loading'" class="icon-loading" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve">
         <path fill="#ffffff" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z" transform="rotate(275.098 25 25)">
@@ -8,42 +9,53 @@
       </svg>
       <div v-if="type !== null && type !== undefined && type !== 'default' && type !== 'loading'" class="icon" :class="'icon-' + type"></div>      
       <div v-if="type !== null && type !== undefined && type !== 'default'" class="space"></div>
-      <div class="message">{{ message }}</div>
+      <div v-if="message !== undefined && message !== null" class="message">{{ message }}</div>
     </div>
+    <div class="space-bottom"></div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType, ref, reactive, computed } from 'vue';
-import { ToastType } from './index';
+import { PureToast, ToastType, ToastPossition } from './index';
 
 export default defineComponent({
   name: 'PureToast',
   props: {
-    type: {
-      type: String as PropType<ToastType>,
-      default: null,
-    },
-    message: {
-      type: String,
-      default: null,
-    },
-    onClean: {
-      type: Function as PropType<() => void>,
-      default: null,
+    model: {
+      type: Object as PropType<PureToast>,
+      required: true,
     },
     cls: {
       type: String,
-      default: 'pure-toast-default',
+      required: true,
+    },
+    possition: {
+      type: String as PropType<ToastPossition>,
+      required: true,
+    },
+    onClean: {
+      type: Function as PropType<() => void>,
+      required: true,
     },
   },
-  setup(props) {
+  setup() {
     return {
+      message: ref<string | null>(null),
+      type: ref<ToastType>('default'),
+    };
+  },
+  mounted() {
+    this.type = this.model.type;
+    this.message = this.model.message;
+    // eslint-disable-next-line vue/no-mutating-props
+    this.model.__updateHandler = (msg: string | null) => {
+      this.message = msg;
     };
   },
   methods: {
     onClickBack() {
-      if (this.type !== 'loading' && this.onClean !== undefined && this.onClean !== null) {
+      if (this.type !== 'loading') {
         this.onClean();
       }
     },

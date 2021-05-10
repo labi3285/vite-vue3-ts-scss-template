@@ -1,15 +1,52 @@
 @import '../global.scss';
 
 .pure-toast-default {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: $pure-margin-toast-top-bottom $pure-margin-toast-left-right;
-
+  flex-direction: column;
+  &-possition-auto {
+    display: flex;
+    align-items: center;
+    .space-top {
+      flex: 2;
+    }
+    .space-bottom {
+      flex: 3;
+    }
+  }
+  &-possition-top {
+    display: flex;
+    align-items: center;
+    .space-top {
+      height: 30px;
+    }
+    .space-bottom {
+      flex: 1;
+    }
+  }
+  &-possition-center {
+    display: flex;
+    align-items: center;
+    .space-top {
+      flex: 1;
+    }
+    .space-bottom {
+      flex: 1;
+    }
+  }
+  &-possition-bottom {
+    display: flex;
+    align-items: center;
+    .space-top {
+      flex: 1;
+    }
+    .space-bottom {
+      height: 30px;
+    }
+  }
   .message-box {
     min-width: 50px;
     border-radius: 5px;
-    background-color: rgba($color: #000000, $alpha: 0.7);
+    background-color: $pure-color-toast;
     display: flex;
     justify-content: center;
     flex-direction: column;
