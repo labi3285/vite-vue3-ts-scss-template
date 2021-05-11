@@ -1,5 +1,5 @@
 <template>
-  <div ref="pureToast" class="pure-toast" :class="[cls, cls + '-possition-' + possition]" @click="onClickBack($event)">
+  <div ref="pureToast" class="pure-toast" :class="[cls, cls + '-position-' + position]" @click="onClickBackground($event)">
     <div class="space-top"></div>
     <div class="message-box" @click.stop.prevent>
       <svg v-if="type === 'loading'" class="icon-loading" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve">
@@ -16,8 +16,9 @@
 </template>
 
 <script lang="ts">
+import * as jsc from 'qx-js-core';
 import { defineComponent, PropType, ref, reactive, computed } from 'vue';
-import { PureToast, ToastType, ToastPossition } from './index';
+import { PureToast, ToastType, Options } from './index';
 
 export default defineComponent({
   name: 'PureToast',
@@ -26,21 +27,19 @@ export default defineComponent({
       type: Object as PropType<PureToast>,
       required: true,
     },
-    cls: {
-      type: String,
-      required: true,
-    },
-    possition: {
-      type: String as PropType<ToastPossition>,
-      required: true,
+    options: {
+      type: Object as PropType<Options>,
+      default: null,
     },
     onClean: {
       type: Function as PropType<() => void>,
       required: true,
     },
   },
-  setup() {
+  setup(props) {
     return {
+      cls: computed(() => props.options?.cls || 'pure-toast-default' ),
+      position: computed(() => props.options?.position || 'auto' ),
       message: ref<string | null>(null),
       type: ref<ToastType>('default'),
     };
@@ -49,12 +48,12 @@ export default defineComponent({
     this.type = this.model.type;
     this.message = this.model.message;
     // eslint-disable-next-line vue/no-mutating-props
-    this.model.__updateHandler = (msg: string | null) => {
+    this.model.__updater = (msg: string | null) => {
       this.message = msg;
     };
   },
   methods: {
-    onClickBack() {
+    onClickBackground() {
       if (this.type !== 'loading') {
         this.onClean();
       }

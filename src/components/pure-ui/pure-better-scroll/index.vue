@@ -7,6 +7,7 @@
 </template>
 
 <script lang="ts">
+import * as jsc from 'qx-js-core';
 import { defineComponent, PropType, ref, reactive, computed } from 'vue';
 import BScroll from 'better-scroll';
 import frameChange from '../utils/directives/frameChange';

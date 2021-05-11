@@ -20,6 +20,7 @@
 </template>
 
 <script lang="ts">
+import * as jsc from 'qx-js-core';
 import { defineComponent, PropType, ref, reactive, computed } from 'vue';
 import PureButton from '../pure-button/index.vue';
 

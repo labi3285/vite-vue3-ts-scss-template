@@ -7,6 +7,7 @@
 </template>
 
 <script lang="ts">
+import * as jsc from 'qx-js-core';
 import { defineComponent, PropType, ref, reactive, computed } from 'vue';
 import frameChange from '../utils/directives/frameChange';
 import offsetChange from '../utils/directives/offsetChange';

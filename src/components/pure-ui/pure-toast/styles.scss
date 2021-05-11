@@ -3,7 +3,7 @@
 .pure-toast-default {
   padding: $pure-margin-toast-top-bottom $pure-margin-toast-left-right;
   flex-direction: column;
-  &-possition-auto {
+  &-position-auto {
     display: flex;
     align-items: center;
     .space-top {
@@ -13,7 +13,7 @@
       flex: 3;
     }
   }
-  &-possition-top {
+  &-position-top {
     display: flex;
     align-items: center;
     .space-top {
@@ -23,7 +23,7 @@
       flex: 1;
     }
   }
-  &-possition-center {
+  &-position-center {
     display: flex;
     align-items: center;
     .space-top {
@@ -33,7 +33,7 @@
       flex: 1;
     }
   }
-  &-possition-bottom {
+  &-position-bottom {
     display: flex;
     align-items: center;
     .space-top {
@@ -80,7 +80,7 @@
     }
     .message {
       font-size: $pure-font-size-16;
-      color: #ffffff;
+      color: $pure-color-tw;
     }
   }
 }

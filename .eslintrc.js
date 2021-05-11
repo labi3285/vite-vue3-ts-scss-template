@@ -26,9 +26,12 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 'off',
     /* ignore */
     '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/no-this-alias': 'off',
+
 
     /* 单引号 */
     'quotes': ['warn', 'single'],
+
 
     /* html元素封闭元素需要换行 */
     'vue/singleline-html-element-content-newline': 'off',

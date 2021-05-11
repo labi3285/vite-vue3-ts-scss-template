@@ -22,6 +22,7 @@
 </template>
 
 <script lang="ts">
+import * as jsc from 'qx-js-core';
 import { defineComponent, PropType, ref, reactive, computed } from 'vue';
 import { queryFloat } from '../utils/query';
 import SvgArrowBack from './arrow-back.svg';

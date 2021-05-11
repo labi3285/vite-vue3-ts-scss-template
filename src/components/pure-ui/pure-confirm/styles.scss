@@ -1,0 +1,77 @@
+@import '../global.scss';
+
+.pure-confirm-default {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $pure-margin-toast-top-bottom $pure-margin-toast-left-right;
+  flex-direction: column;
+  background-color: $pure-color-mask;
+  animation: animate-mask-show 1s;
+  @keyframes animate-mask-show {
+    from { background-color:transparent;}
+    to { background-color: $pure-color-mask; }
+  }
+  .space-top {
+    flex: 2;
+  }
+  .space-bottom {
+    flex: 3;
+  }
+  .confirm-box {
+    min-width: 240px;
+    border-radius: 5px;
+    background-color: $pure-color-white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+    .title {
+      margin: $pure-margin-toast-top-bottom $pure-margin-toast-left-right 0 $pure-margin-toast-left-right;
+      font-size: $pure-font-size-20;
+      font-weight: bold;
+      color: $pure-color-t3;
+    }
+    .message {
+      margin: $pure-margin-inner $pure-margin-toast-left-right $pure-margin-toast-top-bottom $pure-margin-toast-left-right;
+      font-size: $pure-font-size-16;
+      color: $pure-color-t6;
+    }
+    .button-box {
+      width: 100%;
+      border-top: 1px solid $pure-color-line;
+      display: flex;
+      .button {
+        height: 44px;
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 5px 0 5px 0;
+        background-color: transparent;
+        
+        &:not(:last-child) { 
+          border-right: 1px solid $pure-color-line;
+        }
+        &-default {
+          font-size: $pure-font-size-18;
+          color: $pure-color-t3;
+        }
+        &-cancel {
+          font-size: $pure-font-size-18;
+          color: $pure-color-t6;
+        }
+        &-alert {
+          font-size: $pure-font-size-18;
+          color: $pure-color-alert;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

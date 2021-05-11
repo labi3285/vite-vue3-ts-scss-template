@@ -21,6 +21,7 @@
 </template>
 
 <script lang="ts">
+import * as jsc from 'qx-js-core';
 import { defineComponent, PropType, ref, reactive, computed } from 'vue';
 import PureLoading from '../pure-loading/index.vue';
 import PureButton from '../pure-button/index.vue';
